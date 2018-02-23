@@ -34,23 +34,25 @@ checkPasswd.comparePasswords('12345600');
 // `meow` that should return the string `<name> meowed!` where `<name>` is the `name`
 // property set on the Cat instance.
 
-// code here
+//code here
 
-class Animal {
-  constructor(obj){
-    this.type = obj.type;
-    this.name = obj.name;
-    this.sound = obj.sound;
-  }
+// class Animal {
+//   constructor(obj){
+//     this.type = obj.type;
+//     this.name = obj.name;
+//     this.sound = obj.sound;
+//   }
 
-  differentSound(){
-    return this.sound;
-  }
-}
+//   differentSound(){
+//     return this.sound;
+//   }
+// }
 
-class Cat.Animal{
-  
-}
+// class Cat
+// extends Animal{
+
+// }
+// }
 
 
 /* eslint-disable no-undef */

@@ -6,14 +6,33 @@
   GameObject
     createdAt
     dimensions
-    destroy() // prototype method -> returns the string 'Game object was removed from the game.'
+    destroy() // prototype method -> returns the string 'Game object was removed from the game.'*/
 
+    function GameObject (gameobj) {
+      this.createdAt = gameobj.createdAt;
+      this.dimensions = gameobj.dimensions;
+    }
+
+    GameObject.prototype.distroy = function(){
+      console.log('Game object was removed from the game');
+    }
+/*
   NPC
     hp
     name
     takeDamage() // prototype method -> returns the string '<object name> took damage.'
     // should inherit destroy() from GameObject's prototype
+*/
+    function NPC(npcObj){
+      GameObject.call(this,npcObj);
+      this. hp = npcObj.hp;
+      this.name = npcObj.name;
+    }
 
+    NPC.prototype.takeDamage = function(){
+      console.log(`${this.name} took damage`);
+    }
+/*
   Humanoid
     faction
     weapons
@@ -21,13 +40,24 @@
     greet() // prototype method -> returns the string '<object name> offers a greeting in <object language>.'
     // should inherit destroy() from GameObject through NPC
     // should inherit takeDamage() from NPC
+*/
+    function Humanoid (humanoidObj){
+      GameObject.call(this.humanoidObj);
+      this.faction = humanoidObj.faction;
+      this.weapons = humanoidObj.weapons;
+      this.language = humanoidObj.language
+    }
 
+    Humanoid.prototype.greet = function(){
+      console.log(`${this.name} offers greetings in ${this.language}`);
+    }
+/*
   Inheritance chain: Humanoid -> NPC -> GameObject
   Instances of Humanoid should have all of the same properties as NPC and GameObject.
   Instances of NPC should have all of the same properties as GameObject.
 
   Example:
-
+*/
   const hamsterHuey = new Humanoid({
     createdAt: new Date(),
     dimensions: {
@@ -47,7 +77,8 @@
   hamsterHuey.greet(); // returns 'Hamster Huey offers a greeting in Hamsterish'
   hamsterHuey.takeDamage(); // returns 'Hamster Huey took damage.'
   hamsterHuey.destroy(); // returns 'Game object was removed from the game.'
-*/
+
+
 
 /* eslint-disable no-undef */
 
