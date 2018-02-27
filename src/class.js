@@ -14,16 +14,15 @@ class User {
     this.password = options.password;
   }
 
-  comparePasswords () {
-    if (options.password = this.password)
-    return true;
-  }
+  // comparePasswords() {
+  //   if(options.password = this.password) return true;
+  // }
 
+
+// let checkPasswd = new User({ email: 'adfaris@gmail.com', password: '123456789' });
+// return (checkPasswd);
+// checkPasswd.comparePasswords('12345600');
 }
-const checkPasswd = new User({email:'adfaris@gmail.com', password:'123456789'});
-console.log(checkPasswd);
-checkPasswd.comparePasswords('12345600');
-
 // Part 2
 // Create a class called `Animal` and a class called `Cat` using ES6 classes.
 // `Cat` should extend the `Animal` class.
@@ -34,7 +33,7 @@ checkPasswd.comparePasswords('12345600');
 // `meow` that should return the string `<name> meowed!` where `<name>` is the `name`
 // property set on the Cat instance.
 
-//code here
+// code here
 
 // class Animal {
 //   constructor(obj){
