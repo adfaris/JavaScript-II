@@ -5,6 +5,8 @@ const nFibonacci = (n) => {
   // return the nth number in the sequence
   if (n <= 2) return 1;
   return nFibonacci(n - 1) + nFibonacci(n - 2);
+  // if (n <= 1) return 1;
+  // return nFibonacci(n - 1) * nFibonacci(n - 2);
 };
 
 const nFactorial = (n) => {
@@ -15,6 +17,9 @@ const nFactorial = (n) => {
   if (n === 0) return result;
   result = n * nFactorial(n - 1);
   return result;
+
+  // if (n < 1) return 1;
+  // return n * nFactorial(n - 1);
 };
 
 /* Extra Credit */

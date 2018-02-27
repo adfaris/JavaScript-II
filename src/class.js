@@ -7,22 +7,19 @@
 // for a potential password that will be compared to the `password` property.
 // Return true if the potential password matches the `password` property.  Otherwise return false.
 
-// code here
 class User {
   constructor(options) {
     this.email = options.email;
     this.password = options.password;
   }
-
-  // comparePasswords() {
-  //   if(options.password = this.password) return true;
-  // }
-
-
-// let checkPasswd = new User({ email: 'adfaris@gmail.com', password: '123456789' });
-// return (checkPasswd);
-// checkPasswd.comparePasswords('12345600');
+  comparePasswords(potPassword) {
+    return this.password === potPassword;
+  }
 }
+const checkPasswd = new User({ email: 'adfaris@gmail.com', password: '123456789' });
+checkPasswd.comparePasswords('12345600');
+// console.log((checkPasswd));
+
 // Part 2
 // Create a class called `Animal` and a class called `Cat` using ES6 classes.
 // `Cat` should extend the `Animal` class.
@@ -33,27 +30,24 @@ class User {
 // `meow` that should return the string `<name> meowed!` where `<name>` is the `name`
 // property set on the Cat instance.
 
-// code here
+class Animal {
+  constructor(options) {
+    this.age = options.age;
+  }
+  growOlder() {
+    return ++this.age;
+  }
+}
 
-// class Animal {
-//   constructor(obj){
-//     this.type = obj.type;
-//     this.name = obj.name;
-//     this.sound = obj.sound;
-//   }
-
-//   differentSound(){
-//     return this.sound;
-//   }
-// }
-
-// class Cat
-// extends Animal{
-
-// }
-// }
-
-
+class Cat extends Animal {
+  constructor(options) {
+    super(options);
+    this.name = options.name;
+  }
+  meow() {
+    return `${this.name} meowed!`;
+  }
+}
 /* eslint-disable no-undef */
 
 module.exports = {
